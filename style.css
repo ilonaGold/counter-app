@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2 {
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: url("images/kids.jpg") no-repeat;
+  background-position: center;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #005490;
+  --orange: #fdad00;
+  --green: #0ebb11;
+  --yellow: #fdc13d;
+  --red: #df0900;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+/* Layout */
+
+.container {
+  max-width: 80em;
+  margin: 0 auto;
+  padding: 0 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.counter {
+  width: 40em;
+  padding: 2em;
+  background-color: var(--blue);
+  opacity: 0.95;
+  color: var(--white);
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* Buttons */
+
+.buttons {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 0.75em 1.5em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+
+.btn-subtract {
+  background: var(--orange);
+}
+
+.btn-reset {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn-add {
+  background: var(--green);
+}
