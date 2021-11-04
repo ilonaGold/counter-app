@@ -14,8 +14,8 @@ h2 {
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: url("images/kids.jpg") no-repeat;
-  background-position: center;
+  background: url("images/abc.jpg");
+  background-position: top;
   line-height: 1.5;
   min-height: 100vh;
 }
@@ -33,11 +33,11 @@ body {
 /* Typography */
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 /* Layout */
@@ -48,7 +48,7 @@ h2 {
   padding: 0 2em;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   height: 100vh;
 }
 
@@ -56,7 +56,6 @@ h2 {
   width: 40em;
   padding: 2em;
   background-color: var(--blue);
-  opacity: 0.95;
   color: var(--white);
   text-align: center;
   border-radius: 15px;
@@ -65,9 +64,9 @@ h2 {
 /* Buttons */
 
 .buttons {
-  margin-top: 2em;
+  margin: 3.5em auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .btn {
@@ -78,7 +77,7 @@ h2 {
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.75em;
 }
 
 .btn-subtract {
@@ -92,4 +91,57 @@ h2 {
 
 .btn-add {
   background: var(--green);
+}
+
+.btn-subtract:hover,
+.btn-subtract:focus {
+  background: var(--white);
+  color: var(--orange);
+}
+
+.btn-reset:hover,
+.btn-reset:focus {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn-add:hover,
+.btn-add:focus {
+  background: var(--white);
+  color: var(--green);
+}
+
+/* Media Queries */
+
+@media (min-width: 500px) {
+  h1,
+  h2 {
+    font-size: 4.5rem;
+  }
+
+  .buttons {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+  .buttons {
+    max-width: initial;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background: url("images/kids.jpg") no-repeat;
+    background-position: center;
+  }
+  .counter {
+    opacity: 0.95;
+  }
 }
